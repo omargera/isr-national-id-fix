@@ -1,4 +1,4 @@
-package com.omar.national.id;
+package com.omar.nationalid;
 
 import com.google.common.collect.ImmutableMap;
 
