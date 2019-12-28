@@ -1,7 +1,5 @@
 package com.omar.nationalid;
 
-import com.google.common.collect.ImmutableMap;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -35,7 +33,6 @@ public class NationalIdFixer {
      * this function tries to fix the id that contains 9 digits,
      * it can do so if only one digit is missing
      *
-     * @param integerList
      * @return the fixed id number
      */
     static List<Integer> fixId(List<Integer> integerList) {
@@ -82,7 +79,7 @@ public class NationalIdFixer {
     private static Integer calculateMissingDigit(List<Integer> integerList, int missingIndex) {
         int multiplier = VALIDATION_VECTOR.get(missingIndex);
         int totalSum = getTotalSum(integerList);
-        int missingDig = 0;
+        int missingDig;
         if (multiplier == 1) {
             missingDig = (10 - (totalSum % 10))%10;
         } else {

@@ -3,11 +3,10 @@ package com.omar.nationalid;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class NationalIdFixerTest {
 
@@ -33,7 +32,6 @@ public class NationalIdFixerTest {
         List<Integer> integerList = Arrays.asList(0, 1, 2, 3, 0, 1, 2, 3, 8);
         NationalIdFixer.fixId(integerList);
     }
-
 
     @Test
     public void testValidId() {
